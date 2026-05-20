@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doon Didi – Ghar Ka Aachar | Homemade Indian Pickles from Uttarakhand</title>
+  <meta name="description" content="Doon Didi – Ghar Ka Aachar. Authentic homemade Indian pickles, mukhwas, amla candy and murabba. Order fresh, hygienic, traditional achar made with love from Uttarakhand." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/extras.css" />
+  <link rel="stylesheet" href="css/chatbot.css" />
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span><i class="fas fa-phone-alt"></i> <span data-i18n="topbar_care">ग्राहक सेवा</span>: <strong>8445349802</strong></span>
+      <span class="top-bar-sep">|</span>
+      <span><i class="fas fa-leaf"></i> <span data-i18n="topbar_tag">100% घर का बना &amp; स्वच्छ</span></span>
+      <span class="top-bar-sep">|</span>
+      <span class="lang-toggle-wrap"><button class="lang-btn" id="langToggle" onclick="toggleLang()">🌐 English</button></span>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand" onclick="showPage('home')">
+        <span class="brand-text">Doon <span class="brand-highlight">Didi</span></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"     class="nav-link active" data-page="home"     onclick="showPage('home')"     data-i18n="nav_home">🏠 होम</a></li>
+        <li><a href="#products" class="nav-link"        data-page="products" onclick="showPage('products')" data-i18n="nav_products">🛍️ उत्पाद</a></li>
+        <li><a href="#reviews"  class="nav-link"        data-page="reviews"  onclick="showPage('reviews')"  data-i18n="nav_reviews">⭐ समीक्षाएं</a></li>
+        <li><a href="#about"    class="nav-link"        data-page="about"    onclick="showPage('about')"    data-i18n="nav_about">👩‍💼 हमारे बारे में</a></li>
+        <li><a href="#contact"  class="nav-link"        data-page="contact"  onclick="showPage('contact')"  data-i18n="nav_contact">📞 संपर्क</a></li>
+        <li><a href="#contact"  class="nav-btn-order"   onclick="showPage('contact')"                        data-i18n="nav_order">ऑर्डर करें</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- ======================================================
+         PAGE: HOME
+    ====================================================== -->
+    <div class="page active" id="page-home">
+
+      <!-- HERO BANNER -->
+      <section class="hero" id="home">
+        <div class="hero-mandala hero-mandala-left"></div>
+        <div class="hero-mandala hero-mandala-right"></div>
+        <div class="hero-content">
+          <p class="hero-subtitle animate-fadeup" data-i18n="hero_subtitle">✨ शुद्ध · घर का बना · परंपरागत ✨</p>
+          <h1 class="hero-title animate-fadeup delay-1">
+            DOON DIDI<br /><span class="hero-title-sub" data-i18n="hero_brand_sub">Ghar Ka Aachar</span>
+          </h1>
+          <p class="hero-desc animate-fadeup delay-2" data-i18n="hero_desc">
+            प्यार से बनाया, पुराने तरीके से — भारतीय रसोई के असली स्वाद सीधे आपकी थाली तक। कोई प्रिज़र्वेटिव नहीं। कोई शॉर्टकट नहीं। बस शुद्ध देसी अच्छाई।
+          </p>
+          <div class="hero-btns animate-fadeup delay-3">
+            <button class="btn-primary" onclick="showPage('products')" data-i18n="hero_btn_explore">उत्पाद देखें 🛍️</button>
+            <button class="btn-outline" onclick="showPage('contact')"  data-i18n="hero_btn_order">ऑर्डर करें 📞</button>
+          </div>
+        </div>
+        <div class="hero-image-grid animate-fadeup delay-2">
+          <div class="hero-img-card">
+            <img src="images/lahsun-pickle.jpg" alt="Lahsun Pickle" loading="lazy" />
+            <span data-i18n="img_lahsun">लहसुन अचार</span>
+          </div>
+          <div class="hero-img-card">
+            <img src="images/amla-pickle.jpg" alt="Amla Pickle" loading="lazy" />
+            <span data-i18n="img_amla">आंवला अचार</span>
+          </div>
+          <div class="hero-img-card">
+            <img src="images/green-mirch-pickle.jpg" alt="Green Mirch Achar" loading="lazy" />
+            <span data-i18n="img_hari">हरी मिर्च</span>
+          </div>
+          <div class="hero-img-card">
+            <img src="images/red-mirch-pickle.jpg" alt="Red Mirch Achar" loading="lazy" />
+            <span data-i18n="img_lal">लाल मिर्च</span>
+          </div>
+        </div>
+        <div class="hero-scroll-hint">
+          <span data-i18n="scroll_hint">नीचे स्क्रॉल करें</span>
+          <i class="fas fa-chevron-down bounce"></i>
+        </div>
+      </section>
+
+      <!-- INTRO STRIP -->
+      <section class="intro-strip">
+        <div class="intro-strip-inner">
+          <div class="intro-item">
+            <span class="intro-icon">🌿</span>
+            <strong data-i18n="intro1_title">100% प्राकृतिक</strong>
+            <p data-i18n="intro1_desc">कोई कृत्रिम रंग या प्रिज़र्वेटिव नहीं</p>
+          </div>
+          <div class="intro-item">
+            <span class="intro-icon">🏡</span>
+            <strong data-i18n="intro2_title">घर का बना</strong>
+            <p data-i18n="intro2_desc">स्वच्छ रसोई में ताज़ा तैयार</p>
+          </div>
+          <div class="intro-item">
+            <span class="intro-icon">👩‍🍳</span>
+            <strong data-i18n="intro3_title">पारंपरिक नुस्खा</strong>
+            <p data-i18n="intro3_desc">पीढ़ियों से चली आ रही विधि</p>
+          </div>
+          <div class="intro-item">
+            <span class="intro-icon">✅</span>
+            <strong data-i18n="intro4_title">ताज़ी गुणवत्ता</strong>
+            <p data-i18n="intro4_desc">ऑर्डर के बाद ताज़ा तैयार, सुरक्षित पैकेजिंग</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT INTRO -->
+      <section class="about-intro">
+        <div class="section-container">
+          <div class="about-intro-img">
+            <img src="images/about-intro.jpg" alt="Traditional Indian Pickle" loading="lazy" />
+            <div class="about-intro-badge" data-i18n="badge_est">Est. Since 2010</div>
+          </div>
+          <div class="about-intro-text">
+            <p class="section-tag" data-i18n="home_story_tag">हमारी कहानी</p>
+            <h2 class="section-title" data-i18n="home_story_title">प्यार &amp; परंपरा से <span class="highlight">बना</span></h2>
+            <p data-i18n="home_story_p1">
+              <strong>Doon Didi – Ghar Ka Aachar</strong> में आपका स्वागत है — एक घरेलू रसोई जहाँ हर जार में असली स्वाद, यादें और एक माँ का प्यार भरा है।
+            </p>
+            <p data-i18n="home_story_p2">
+              <strong>कविता उनियाल</strong> द्वारा स्थापित, हमारी यात्रा भारतीय व्यंजनों के पुराने स्वादों को संरक्षित करने के एक साधारण जुनून से शुरू हुई।
+            </p>
+            <p data-i18n="home_story_p3">
+              हमारा मानना है कि घर का खाना सबसे अच्छा होता है — और यही विश्वास हमारे हर काम की नींव है। कोई मास प्रोडक्शन नहीं। कोई शॉर्टकट नहीं।
+            </p>
+            <button class="btn-primary" onclick="showPage('about')" data-i18n="home_story_btn">हमारी कहानी पढ़ें →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PRODUCTS -->
+      <section class="featured-products">
+        <div class="section-container">
+          <p class="section-tag text-center" data-i18n="feat_tag">हमारी विशेषताएं</p>
+          <h2 class="section-title text-center" data-i18n="feat_title">चुनिंदा <span class="highlight">उत्पाद</span></h2>
+          <p class="section-sub text-center" data-i18n="feat_sub">बेहतरीन सामग्री से छोटे बैच में हाथ से तैयार</p>
+          <div class="products-grid" id="featuredGrid">
+            <!-- Populated via JS -->
+          </div>
+          <div class="text-center mt-3">
+            <button class="btn-primary" onclick="showPage('products')" data-i18n="feat_view_all">सभी उत्पाद देखें →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS STRIP -->
+      <section class="testimonial-strip">
+        <div class="section-container">
+          <p class="section-tag text-center" data-i18n="testi_tag">खुश ग्राहक</p>
+          <h2 class="section-title text-center white" data-i18n="testi_title">हमारे ग्राहक क्या <span class="highlight-light">कहते हैं</span></h2>
+          <div class="testimonial-slider" id="testimonialSlider"></div>
+          <div class="testimonial-dots" id="testimonialDots"></div>
+        </div>
+      </section>
+
+      <!-- CTA BANNER -->
+      <section class="cta-banner">
+        <div class="cta-mandala"></div>
+        <div class="cta-content">
+          <h2 data-i18n="cta_title">असली घर के <span class="highlight">अचार</span> का स्वाद लेना है?</h2>
+          <div class="cta-btns">
+            <a href="tel:8445349802" class="btn-primary"><i class="fas fa-phone-alt"></i> <span data-i18n="cta_call">कॉल करें: 8445349802</span></a>
+            <button class="btn-outline-white" onclick="showPage('contact')" data-i18n="cta_msg">संदेश भेजें</button>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /page-home -->
+
+
+    <!-- ======================================================
+         PAGE: PRODUCTS
+    ====================================================== -->
+    <div class="page" id="page-products">
+
+      <section class="page-hero products-hero">
+        <div class="page-hero-content">
+          <p class="section-tag" data-i18n="prod_hero_tag">हमारा संग्रह</p>
+          <h1 data-i18n="prod_hero_title">हमारे <span class="highlight">उत्पाद</span></h1>
+          <p data-i18n="prod_hero_sub">हर जार स्वाद, परंपरा और देखभाल का उत्सव है</p>
+        </div>
+      </section>
+
+      <section class="products-section">
+        <div class="section-container">
+          <!-- Filter Bar -->
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all"    data-i18n="filter_all">सभी उत्पाद</button>
+            <button class="filter-btn" data-filter="pickle"        data-i18n="filter_pickle">अचार</button>
+            <button class="filter-btn" data-filter="sweet"         data-i18n="filter_sweet">मिठाई &amp; व्यंजन</button>
+            <button class="filter-btn" data-filter="fresh"         data-i18n="filter_fresh">मुखवास</button>
+          </div>
+
+          <div class="products-grid-full" id="allProductsGrid">
+            <!-- populated via JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Order Info -->
+      <section class="order-info-section">
+        <div class="section-container">
+          <div class="order-info-grid">
+            <div class="order-info-card">
+              <i class="fas fa-box-open"></i>
+              <h3 data-i18n="order1_title">न्यूनतम ऑर्डर</h3>
+              <p data-i18n="order1_desc">न्यूनतम ऑर्डर ₹200। ₹1000 से ऊपर के ऑर्डर पर थोक छूट उपलब्ध।</p>
+            </div>
+            <div class="order-info-card">
+              <i class="fas fa-phone-alt"></i>
+              <h3 data-i18n="order2_title">ऑर्डर कैसे करें</h3>
+              <p data-i18n="order2_desc"><strong>8445349802</strong> पर कॉल या WhatsApp करें।</p>
+            </div>
+            <div class="order-info-card">
+              <i class="fas fa-leaf"></i>
+              <h3 data-i18n="order3_title">ताज़गी की गारंटी</h3>
+              <p data-i18n="order3_desc">सभी उत्पाद ऑर्डर के बाद ताज़ा तैयार किए जाते हैं। कोई पुराना स्टॉक नहीं।</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /page-products -->
+
+
+    <!-- ======================================================
+         PAGE: REVIEWS
+    ====================================================== -->
+    <div class="page" id="page-reviews">
+
+      <section class="page-hero reviews-hero">
+        <div class="page-hero-content">
+          <p class="section-tag" data-i18n="rev_hero_tag">ग्राहकों की प्रतिक्रिया</p>
+          <h1 data-i18n="rev_hero_title">समीक्षाएं &amp; <span class="highlight">रेटिंग</span></h1>
+          <p data-i18n="rev_hero_sub">आपके शब्द हमें प्यार से पकाते रहने की प्रेरणा देते हैं</p>
+        </div>
+      </section>
+
+      <section class="reviews-section">
+        <div class="section-container">
+          <div class="reviews-layout">
+
+            <!-- Review Stats -->
+            <div class="reviews-stats-box" id="reviewStatsBox">
+              <div class="avg-rating-display">
+                <span class="big-rating" id="avgRatingNum">4.8</span>
+                <div>
+                  <div class="stars-display" id="avgStarsDisplay"></div>
+                  <span id="totalReviewsLabel" data-i18n="rev_based_on">0 समीक्षाओं पर आधारित</span>
+                </div>
+              </div>
+              <div class="rating-bars" id="ratingBars"></div>
+            </div>
+
+            <!-- All Reviews -->
+            <div class="reviews-list" id="reviewsList">
+              <!-- populated via JS -->
+            </div>
+
+          </div>
+
+          <!-- Submit Review Form -->
+          <div class="review-form-section">
+            <h2 class="section-title text-center" data-i18n="rev_form_title">अपना <span class="highlight">अनुभव</span> साझा करें</h2>
+            <p class="section-sub text-center" data-i18n="rev_form_sub">हम जानना चाहते हैं कि आपको हमारे उत्पाद कैसे लगे!</p>
+
+            <form class="review-form" id="reviewForm" onsubmit="submitReview(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="reviewName" data-i18n="rev_label_name">आपका नाम <span class="req">*</span></label>
+                  <input type="text" id="reviewName" data-i18n-placeholder="rev_ph_name" placeholder="जैसे: केशव पैन्यूली" required />
+                </div>
+                <div class="form-group">
+                  <label for="reviewProduct" data-i18n="rev_label_product">समीक्षित उत्पाद <span class="req">*</span></label>
+                  <select id="reviewProduct" required>
+                    <option value="" data-i18n="rev_select_product">— उत्पाद चुनें —</option>
+                    <option>Lahsun Pickle</option>
+                    <option>Amla Pickle</option>
+                    <option>Green Mirch Achar</option>
+                    <option>Red Mirch Achar</option>
+                    <option>Mixed Pickle</option>
+                    <option>Gajar Pickle</option>
+                    <option>Mukhwas</option>
+                    <option>Amla Candy</option>
+                    <option>Murabba</option>
+                    <option data-i18n="rev_other">अन्य</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label data-i18n="rev_label_rating">आपकी रेटिंग <span class="req">*</span></label>
+                <div class="star-picker" id="starPicker">
+                  <span class="star-pick" data-val="1">★</span>
+                  <span class="star-pick" data-val="2">★</span>
+                  <span class="star-pick" data-val="3">★</span>
+                  <span class="star-pick" data-val="4">★</span>
+                  <span class="star-pick" data-val="5">★</span>
+                </div>
+                <input type="hidden" id="reviewRating" value="0" />
+              </div>
+              <div class="form-group">
+                <label for="reviewText" data-i18n="rev_label_text">आपकी समीक्षा <span class="req">*</span></label>
+                <textarea id="reviewText" rows="4" data-i18n-placeholder="rev_ph_text" placeholder="अपना अनुभव बताएं..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary full-width" id="reviewSubmitBtn">
+                <i class="fas fa-paper-plane"></i> <span data-i18n="rev_submit">समीक्षा जमा करें</span>
+              </button>
+              <div id="reviewMsg" class="form-message"></div>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+    </div><!-- /page-reviews -->
+
+
+    <!-- ======================================================
+         PAGE: ABOUT
+    ====================================================== -->
+    <div class="page" id="page-about">
+
+      <section class="page-hero about-hero">
+        <div class="page-hero-content">
+          <p class="section-tag" data-i18n="about_hero_tag">हमारी कहानी</p>
+          <h1 data-i18n="about_hero_title">हमारे <span class="highlight">बारे में</span></h1>
+          <p data-i18n="about_hero_sub">जुनून, परंपरा और घर के स्वाद की कहानी</p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <div class="section-container">
+
+          <div class="about-founder-row">
+            <div class="founder-img-wrap">
+              <div class="founder-img-circle">
+                <img src="images/founder.jpg" alt="Kavita Uniyal – Founder" loading="lazy" />
+              </div>
+              <div class="founder-badge-card">
+                <strong>Kavita Uniyal</strong>
+                <span data-i18n="founder_title">संस्थापक &amp; CEO</span>
+              </div>
+            </div>
+            <div class="founder-story">
+              <p class="section-tag" data-i18n="founder_tag">संस्थापक से मिलें</p>
+              <h2 class="section-title" data-i18n="founder_heading">हर जार के पीछे का <span class="highlight">दिल</span></h2>
+              <p data-i18n="founder_p1">
+                मेरा नाम <strong>कविता उनियाल</strong> है और मेरा हमेशा से मानना रहा है कि सबसे अच्छा खाना घर की रसोई से आता है — धैर्य, प्यार और बेहतरीन सामग्री के साथ।
+              </p>
+              <p data-i18n="founder_p2">
+                उत्तराखंड की पहाड़ियों में पली-बढ़ी, मैंने अपनी माँ और नानी को हर मौसम में अचार के जार तैयार करते देखा — घर में सरसों के तेल, मेथी और हल्दी की खुशबू भर जाती थी। वो स्वाद मुझे कभी नहीं भूले।
+              </p>
+              <p data-i18n="founder_p3">
+                अपनी रेसिपी को वर्षों तक परिपक्व करने के बाद, मैंने इन असली स्वादों को उन सभी लोगों तक पहुँचाने का फ़ैसला किया जो सच्चे घरेलू अचार की याद में हैं। आज <strong>Doon Didi</strong> सिर्फ एक व्यापार नहीं — यह भारतीय पाक परंपरा को मेरा प्रेम-पत्र है।
+              </p>
+              <div class="founder-values">
+                <div class="fv-item"><i class="fas fa-heart"></i> <span data-i18n="fv1">प्यार से बना</span></div>
+                <div class="fv-item"><i class="fas fa-shield-alt"></i> <span data-i18n="fv2">स्वच्छ रसोई</span></div>
+                <div class="fv-item"><i class="fas fa-leaf"></i> <span data-i18n="fv3">प्राकृतिक सामग्री</span></div>
+                <div class="fv-item"><i class="fas fa-star"></i> <span data-i18n="fv4">असली नुस्खा</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="timeline-section">
+            <h2 class="section-title text-center" data-i18n="tl_heading">हमारी <span class="highlight">यात्रा</span></h2>
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-dot">2010</div>
+                <div class="tl-content">
+                  <h3 data-i18n="tl1_title">शुरुआत</h3>
+                  <p data-i18n="tl1_desc">कविता ने घर पर अचार बनाना शुरू किया, पड़ोसियों और दोस्तों के साथ साझा किया जो असली स्वाद को बेहद पसंद करते थे।</p>
+                </div>
+              </div>
+              <div class="tl-item right">
+                <div class="tl-dot">2014</div>
+                <div class="tl-content">
+                  <h3 data-i18n="tl2_title">पहले ऑर्डर</h3>
+                  <p data-i18n="tl2_desc">बात फैली! दूसरे शहरों के दोस्तों से पहले औपचारिक ऑर्डर आए जो घर का स्वाद फिर से जीना चाहते थे।</p>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot">2018</div>
+                <div class="tl-content">
+                  <h3 data-i18n="tl3_title">विस्तार</h3>
+                  <p data-i18n="tl3_desc">बढ़ती माँग को पूरा करने के लिए रसोई का विस्तार हुआ। स्वच्छ पैकेजिंग के साथ अचार हर जगह पहुँचा।</p>
+                </div>
+              </div>
+              <div class="tl-item right">
+                <div class="tl-dot">2022</div>
+                <div class="tl-content">
+                  <h3 data-i18n="tl4_title">नए उत्पाद जुड़े</h3>
+                  <p data-i18n="tl4_desc">मुखवास, आंवला कैंडी और मुरब्बा मेनू में शामिल हुए — पूरे भारत के ग्राहकों के लिए और भी पारंपरिक स्वाद।</p>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot">2024</div>
+                <div class="tl-content">
+                  <h3 data-i18n="tl5_title">डिजिटल होना</h3>
+                  <p data-i18n="tl5_desc">ऑनलाइन उपस्थिति लॉन्च की ताकि और भी अचार प्रेमियों तक पहुँचा जा सके।</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quality Commitment -->
+          <div class="quality-section">
+            <div class="quality-img">
+              <img src="images/quality-amla.jpg" alt="Fresh Quality Ingredients" loading="lazy" />
+            </div>
+            <div class="quality-text">
+              <p class="section-tag" data-i18n="quality_tag">हमारा वादा</p>
+              <h2 class="section-title" data-i18n="quality_title">गुणवत्ता जो आप <span class="highlight">महसूस करें</span></h2>
+              <ul class="quality-list">
+                <li><i class="fas fa-check-circle"></i> <span data-i18n="q1">विश्वसनीय किसानों से सीधे प्राप्त सामग्री</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-i18n="q2">कोई कृत्रिम प्रिज़र्वेटिव या सिंथेटिक रंग नहीं</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-i18n="q3">पूरी तरह स्वच्छ घरेलू रसोई में तैयार</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-i18n="q4">हर बार एक जैसे स्वाद के लिए परखी हुई रेसिपी</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-i18n="q5">ताज़गी बनाए रखने के लिए फ़ूड-ग्रेड पैकेजिंग</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-i18n="q6">हर ऑर्डर के बाद ताज़ा तैयार — कोई पुराना स्टॉक नहीं</span></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div><!-- /page-about -->
+
+
+    <!-- ======================================================
+         PAGE: CONTACT
+    ====================================================== -->
+    <div class="page" id="page-contact">
+
+      <section class="page-hero contact-hero">
+        <div class="page-hero-content">
+          <p class="section-tag" data-i18n="contact_hero_tag">संपर्क करें</p>
+          <h1 data-i18n="contact_hero_title">हमसे <span class="highlight">बात करें</span></h1>
+          <p data-i18n="contact_hero_sub">हमें आपसे सुनना अच्छा लगता है। कॉल करें, संदेश दें या लिखें!</p>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="section-container">
+          <div class="contact-layout">
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+              <h2 class="section-title" data-i18n="contact_connect_title">जुड़ते <span class="highlight">हैं</span></h2>
+              <p data-i18n="contact_connect_desc">ऑर्डर देना है या कोई सवाल है? किसी भी माध्यम से संपर्क करें — हम हमेशा मदद के लिए तैयार हैं!</p>
+
+              <div class="contact-cards">
+                <div class="contact-card highlight-card">
+                  <div class="cc-icon"><i class="fas fa-phone-alt"></i></div>
+                  <div class="cc-details">
+                    <h3 data-i18n="cc_care_title">ग्राहक सेवा</h3>
+                    <a href="tel:8445349802" class="cc-value">8445349802</a>
+                    <p data-i18n="cc_care_hours">सोम – शनि: सुबह 9 – शाम 7 बजे</p>
+                  </div>
+                </div>
+                <div class="contact-card">
+                  <div class="cc-icon"><i class="fab fa-whatsapp"></i></div>
+                  <div class="cc-details">
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/918445349802" target="_blank" class="cc-value">8445349802</a>
+                    <p data-i18n="cc_wa_desc">WhatsApp पर ऑर्डर करें</p>
+                  </div>
+                </div>
+                <div class="contact-card">
+                  <div class="cc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                  <div class="cc-details">
+                    <h3 data-i18n="cc_loc_title">स्थान</h3>
+                    <span class="cc-value" data-i18n="cc_loc_value">उत्तराखंड, भारत</span>
+                    <p data-i18n="cc_loc_desc">उत्तराखंड से संचालित</p>
+                  </div>
+                </div>
+                <div class="contact-card">
+                  <div class="cc-icon"><i class="fas fa-clock"></i></div>
+                  <div class="cc-details">
+                    <h3 data-i18n="cc_hours_title">कार्य समय</h3>
+                    <span class="cc-value" data-i18n="cc_hours_value">सोम – शनि: 9 AM – 7 PM</span>
+                    <p data-i18n="cc_hours_sun">रविवार: 10 AM – 3 PM</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-social">
+                <p data-i18n="follow_us">फ़ॉलो करें</p>
+                <div class="social-icons">
+                  <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/doon_didi_ghar_ka_aachar" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-insta"><i class="fab fa-instagram"></i></a>
+                  <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                  <a href="https://wa.me/918445349802" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <a href="https://www.instagram.com/doon_didi_ghar_ka_aachar" target="_blank" rel="noopener noreferrer" class="insta-handle-pill">
+                  <i class="fab fa-instagram"></i>
+                  <span>@doon_didi_ghar_ka_aachar</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrap">
+              <h2 class="section-title" data-i18n="cf_title">संदेश <span class="highlight">भेजें</span></h2>
+              <form class="contact-form" id="contactForm" onsubmit="submitContact(event)">
+                <div class="form-group">
+                  <label for="contactName" data-i18n="cf_name_label">पूरा नाम <span class="req">*</span></label>
+                  <input type="text" id="contactName" data-i18n-placeholder="cf_name_ph" placeholder="आपका नाम" required />
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail" data-i18n="cf_email_label">ईमेल पता <span class="req">*</span></label>
+                  <input type="email" id="contactEmail" placeholder="your@email.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="contactPhone" data-i18n="cf_phone_label">फ़ोन नंबर</label>
+                  <input type="tel" id="contactPhone" data-i18n-placeholder="cf_phone_ph" placeholder="आपका फ़ोन नंबर" />
+                </div>
+                <div class="form-group">
+                  <label for="contactSubject" data-i18n="cf_subject_label">विषय</label>
+                  <select id="contactSubject">
+                    <option data-i18n="cf_sub1">ऑर्डर देना है</option>
+                    <option data-i18n="cf_sub2">उत्पाद जानकारी</option>
+                    <option data-i18n="cf_sub3">फ़ीडबैक</option>
+                    <option data-i18n="cf_sub4">अन्य</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="contactMessage" data-i18n="cf_msg_label">संदेश <span class="req">*</span></label>
+                  <textarea id="contactMessage" rows="5" data-i18n-placeholder="cf_msg_ph" placeholder="आपको क्या चाहिए बताएं..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">
+                  <i class="fas fa-paper-plane"></i> <span data-i18n="cf_submit">संदेश भेजें</span>
+                </button>
+                <div id="contactMsg" class="form-message"></div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /page-contact -->
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>🌶️ Doon Didi</h3>
+          <p data-i18n="footer_brand_desc">घर का बना अचार &amp; पारंपरिक व्यंजन — कविता उनियाल द्वारा प्यार से बनाया, उत्तराखंड, भारत।</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/doon_didi_ghar_ka_aachar" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-insta"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/918445349802" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          <a href="https://www.instagram.com/doon_didi_ghar_ka_aachar" target="_blank" rel="noopener noreferrer" class="footer-insta-handle">
+            <i class="fab fa-instagram"></i>
+            <span>@doon_didi_ghar_ka_aachar</span>
+          </a>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer_quick_links">त्वरित लिंक</h4>
+          <ul>
+            <li><a href="#" onclick="showPage('home')"     data-i18n="nav_home">🏠 होम</a></li>
+            <li><a href="#" onclick="showPage('products')" data-i18n="nav_products">🛍️ उत्पाद</a></li>
+            <li><a href="#" onclick="showPage('reviews')"  data-i18n="nav_reviews">⭐ समीक्षाएं</a></li>
+            <li><a href="#" onclick="showPage('about')"    data-i18n="nav_about">👩‍💼 हमारे बारे में</a></li>
+            <li><a href="#" onclick="showPage('contact')"  data-i18n="nav_contact">📞 संपर्क</a></li>
+          </ul>
+        </div>
+        <div class="footer-products">
+          <h4 data-i18n="footer_our_products">हमारे उत्पाद</h4>
+          <ul>
+            <li>🧄 <span data-i18n="fp_lahsun">लहसुन अचार</span></li>
+            <li>🫒 <span data-i18n="fp_amla">आंवला अचार</span></li>
+            <li>🌶️ <span data-i18n="fp_hari">हरी मिर्च अचार</span></li>
+            <li>🌶️ <span data-i18n="fp_lal">लाल मिर्च अचार</span></li>
+            <li>🥗 <span data-i18n="fp_mixed">मिक्स्ड अचार</span></li>
+            <li>🥕 <span data-i18n="fp_gajar">गाजर अचार</span></li>
+            <li>🌱 <span data-i18n="fp_mukhwas">मुखवास</span></li>
+            <li>🍬 <span data-i18n="fp_candy">आंवला कैंडी</span></li>
+            <li>🍯 <span data-i18n="fp_murabba">मुरब्बा</span></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 data-i18n="footer_contact_us">संपर्क करें</h4>
+          <p><i class="fas fa-phone-alt"></i> <a href="tel:8445349802">8445349802</a></p>
+          <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918445349802" data-i18n="footer_wa_order">WhatsApp ऑर्डर</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> <span data-i18n="cc_loc_value">उत्तराखंड, भारत</span></p>
+          <p><i class="fas fa-clock"></i> <span data-i18n="footer_hours">सोम–शनि: 9AM – 7PM</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer_copy">© 2024 Doon Didi – Ghar Ka Aachar. Made with ❤️ in India.</p>
+      <div class="footer-insta-strip">
+        <i class="fab fa-instagram"></i>
+        <span>Follow us on Instagram</span>
+        <a href="https://www.instagram.com/doon_didi_ghar_ka_aachar" target="_blank" rel="noopener noreferrer">@doon_didi_ghar_ka_aachar</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/918445349802" class="whatsapp-float" target="_blank" aria-label="WhatsApp Order">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+
+  <!-- ===================================================
+       CHATBOT WIDGET
+  =================================================== -->
+  <div id="chatbotWrapper">
+
+    <!-- Toggle Button -->
+    <button class="chatbot-toggle" id="chatbotToggle" onclick="toggleChatbot()" aria-label="Open Chat Assistant">
+      <span class="chatbot-toggle-icon" id="chatToggleIcon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      </span>
+      <span class="chatbot-pulse"></span>
+      <span class="chatbot-badge" id="chatbotBadge">1</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="chatbot-window" id="chatbotWindow" role="dialog" aria-label="Chat Assistant">
+
+      <!-- Header -->
+      <div class="chatbot-header">
+        <div class="chatbot-avatar">
+          <span>🌶️</span>
+        </div>
+        <div class="chatbot-header-info">
+          <h4 data-i18n="chat_header_title">Doon Didi सहायक</h4>
+          <span class="chatbot-status">
+            <span class="status-dot"></span>
+            <span data-i18n="chat_online">ऑनलाइन है</span>
+          </span>
+        </div>
+        <div class="chatbot-header-actions">
+          <button class="chat-lang-btn" id="chatLangBtn" onclick="toggleChatLang()" title="Switch Language">
+            <span id="chatLangLabel">EN</span>
+          </button>
+          <button class="chatbot-voice-toggle" id="chatVoiceToggle" onclick="toggleVoiceOutput()" title="Toggle voice reply">
+            <svg id="voiceOnIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            <svg id="voiceOffIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+          </button>
+          <button class="chatbot-close" onclick="toggleChatbot()" aria-label="Close">✕</button>
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div class="chatbot-messages" id="chatMessages"></div>
+
+      <!-- Typing Indicator -->
+      <div class="chat-typing" id="chatTyping" style="display:none;">
+        <div class="typing-bubble">
+          <span></span><span></span><span></span>
+        </div>
+        <small data-i18n="chat_typing">जवाब लिख रहे हैं...</small>
+      </div>
+
+      <!-- Suggested Questions -->
+      <div class="chat-suggestions" id="chatSuggestions">
+        <button class="chat-suggest-btn" onclick="useSuggestion(this)"
+          data-i18n="sug1">आपके उत्पाद क्या हैं?</button>
+        <button class="chat-suggest-btn" onclick="useSuggestion(this)"
+          data-i18n="sug2">ऑर्डर कैसे करें?</button>
+        <button class="chat-suggest-btn" onclick="useSuggestion(this)"
+          data-i18n="sug3">लहसुन अचार में क्या है?</button>
+      </div>
+
+      <!-- Input Area -->
+      <div class="chatbot-input-area">
+        <button class="chat-mic-btn" id="chatMicBtn" onclick="toggleVoiceInput()" title="Voice input" aria-label="Start voice input">
+          <svg id="micIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+        </button>
+        <input
+          type="text"
+          id="chatInput"
+          data-i18n-placeholder="chat_input_ph"
+          placeholder="अपना सवाल लिखें..."
+          autocomplete="off"
+          onkeydown="if(event.key==='Enter') sendChatMessage()"
+          aria-label="Chat message"
+        />
+        <button class="chat-send-btn" onclick="sendChatMessage()" aria-label="Send message">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </div>
+
+    </div><!-- /chatbot-window -->
+  </div><!-- /chatbotWrapper -->
+
+</body>
+</html>
